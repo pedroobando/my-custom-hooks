@@ -9,5 +9,6 @@ Ejemplo de uso:
     email: '',
     activo: false
   }
+
   const [values, handleInputChange, reset] = useFetch(initialForm);
 ```
