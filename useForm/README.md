@@ -4,37 +4,40 @@ Ejemplo de uso:
 
 ```
   const initialForm = {
-    nameField: '',
-    ageField: 0,
-    emailField: '',
-    activoField: false
+    name: '',
+    email: '',
+    activo: false
   }
 
   const [formValues, handleInputChange, reset] = useForm(initialForm);
-  
-  const { nameField, ageField, emailField, activoField } = formValues;
+
+  const { name, email, activo } = formValues;
 ```
 
-
 Implementacion
+
 ```
   <input
     type="text"
-    className="form-control"
-    placeholder="Indique el name"
-    name="nameField"
-    value={nameField}
+    name="name"
+    value={name}
     id=""
     onChange={handleInputChange}
   />
-  
+
   <input
     type="email"
-    className="form-control"
     placeholder="Put your email"
-    name="emailField"
-    value={emailField}
+    name="email"
+    value={email}
     id=""
+    onChange={handleInputChange}
+  />
+
+  <input
+    type="checkbox"
+    name="activo"
+    checked={activo}
     onChange={handleInputChange}
   />
 ```
